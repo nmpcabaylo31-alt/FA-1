@@ -36,7 +36,4 @@ def main():
     # Display result
     distance = calculate_distance(point1, point2)
     print(f"\nThe distance between {point1} and {point2} is {distance:.2f} units.")
-
-
-if __name__ == "__main__":
-    main()
+Author: Natalia Marie P. Cabaylo _ 8 Molave
