@@ -6,7 +6,7 @@ import math
 """
 Distance Calculator
 --------------------
-Calculates the straight-line (Euclidean) distance between two points
+Calculates the straight-line (Pythagorean) distance between two points
 on a 2D plane, given their (x, y) coordinates.
 
 Formula used:
@@ -25,7 +25,7 @@ def get_coordinate(label):
 
 def calculate_distance(point_a, point_b):
     """
-    Calculate the Euclidean distance between two points.
+    Calculate the Pythagorean distance between two points.
 
         point_a, point_b: tuples in the form (x, y)
             Returns the distance as a float.
@@ -59,5 +59,4 @@ def main():
           f"is {result:.2f} units.")
 
 
-if __name__ == "__main__":
-    main()
+Author: Cabaylo, Natalia Marie P._8-Molave
