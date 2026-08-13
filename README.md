@@ -1,4 +1,7 @@
-# FA-1
+#FA_1
+
+import math
+
 
 """
 Distance Calculator
@@ -7,30 +10,25 @@ Calculates the straight-line (Euclidean) distance between two points
 on a 2D plane, given their (x, y) coordinates.
 
 Formula used:
-    distance = math.sqrt (math.pow (x2 - x1,2) + math.pow (y2 - y1,2))
+    distance = sqrt( (x2 - x1)^2 + (y2 - y1)^2 )
 """
 
-import math
-
-
-def get_point(point_label):
+def get_coordinate(label):
     """
-    Ask the user to enter the x and y coordinates of a point.
+    Ask the user to enter a single coordinate value.
 
-    point_label: a short label used in the prompt, e.g. "first" or "second"
-    Returns a tuple (x, y) of floats.
+        label: text shown in the prompt, e.g. "x2"
+            Returns the coordinate as a float.
     """
-    x = float(input(f"Enter the x-coordinate of the {point_label} point: "))
-    y = float(input(f"Enter the y-coordinate of the {point_label} point: "))
-    return x, y
+    return float(input(f"Enter {label}: "))
 
 
 def calculate_distance(point_a, point_b):
     """
     Calculate the Euclidean distance between two points.
 
-    point_a, point_b: tuples in the form (x, y)
-    Returns the distance as a float.
+        point_a, point_b: tuples in the form (x, y)
+            Returns the distance as a float.
     """
     x1, y1 = point_a
     x2, y2 = point_b
@@ -46,9 +44,14 @@ def calculate_distance(point_a, point_b):
 def main():
     print("=== Distance Calculator ===")
 
-    # Get both points from the user
-    first_point = get_point("first")
-    second_point = get_point("second")
+    # Get coordinates in the order: x2, x1, y2, y1
+    x2 = get_coordinate("x2")
+    x1 = get_coordinate("x1")
+    y2 = get_coordinate("y2")
+    y1 = get_coordinate("y1")
+
+    first_point = (x1, y1)
+    second_point = (x2, y2)
 
     # Compute and display the result
     result = calculate_distance(first_point, second_point)
